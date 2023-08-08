@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,19 +12,20 @@
     <script src="https://kit.fontawesome.com/a52bd45550.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+   <!---------Header------------> 
     <header id = "header">
         <nav class="nav">
-            <div class ="left" ><img src="./logo.png" alt = "Logo" height="28px" >Ankit's Portfolio</div>
-            <div class = "right">
-                <ul>
+            <div class ="left" ><img src="Images/Logo.png" alt = "Logo" height="28px" >Ankit's Portfolio</div>
+            <div iclass = "right">
+                <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#row">About</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#projects">Project</a></li>
                     <li><a href="#contacts">Contact Me</a></li>
-                  
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
-                
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </div>
         </nav>
     </header>
@@ -32,41 +33,40 @@
     <div class="wrapper">
         <div class="image">
             <img src="./Images/headerImage.png" alt="Background Image">
+            
             <div class="contents">
                 <h1> Crafting Digital World </h1>
                 <p>"Crafting digital experiences that captivate. Transforming ideas into elegant, functional websites. Elevate your online presence with my innovative web solutions."</p>
             </div>
         </div>
     </div>
-    
-    
-
+    <!---------About me------------> 
     <div id="row">
             <div class="aboutleft"><img src = "./Images/me.jpeg" ></div>
             <div class="aboutright">
                 <h2 class = "subTitle">About Me</h2>
                 <p class = "aboutText">I'm Ankit Panda, a dedicated B.Tech student majoring in Electrical Engineering at OUTR Bbsr. With a passion for technology that drives me, I'm on a journey to synchronize with the modern world's dynamic pace. As a fervent tech enthusiast, I'm currently immersed in the world of web development, honing my skills in HTML, CSS, and JavaScript for crafting captivating front-end experiences. On the flip side, I'm delving into the MEAN stack, exploring the intricate realm of back-end development. My portfolio website, meticulously designed with HTML, CSS, and JavaScript, reflects my commitment to merging creativity and functionality.</p>
                 <div class = "tab-titles">
-                    <p class = "tab-links link1 ">Skills</p>
+                    <p class = "tab-links link1">Skills</p>
                     <p class = "tab-links link2">Education</p>
                     <p class = "tab-links link3">Experience</p>    
                 </div>
                 <div class="tab-contents">
-                    <div class="skills">
+                    <div class="skills tab">
                         <ul>
                             <li><span>UI/UX Design</span><br>Web Designing Interfaces</li>
                             <li><span>Front End</span><br>HTML AND CSS</li>
                             <li><span>Back End</span><br>JAVASCRIPT</li>
                         </ul>   
                     </div>
-                    <div class = "education">
+                    <div class = "education tab">
                         <ul>
                             <li><span>OUTR</span><br>BTECH EE 2026</li>
                             <li><span>ST XAVIERS</span><br>HIGHER SECONDARY<br> 2019-2021 94.6%</li>
                             <li><span>BSHS</span><br>PRIMARY AND SECONDARY <br>2010-2019 92.5%</li>
                         </ul>
                     </div>
-                    <div class="experience">
+                    <div class="experience tab">
                         <ul>
                             <li><span>SMART ODISHA HACKATHON</span><br>Participation Only</li>
                             <li><span>CP RUSH Top 7</span><br>XSTASY 2023</li>
@@ -78,6 +78,37 @@
             
         </div>
     </div>
+    <!--------Services-------------->
+    <div id="services">
+        <div class="container">
+            <h2 class = "subTitle">My services</h2>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Web Design</h3>
+                    <p>"Unlock the potential of your online presence with captivating web designs tailored to your brand. Let's collaborate to turn your digital vision into reality. Contact me today!"</p>
+                    <a href="#">Learn more</a>
+
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>"Elevate user experiences with intuitive UI/UX design. Ready to transform your digital platform? Let's connect now."</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h3>App Design</h3>
+                    <p>"Transforming ideas into sleek, user-centered apps. Seamlessly blending design and functionality for unforgettable digital solutions. Connect with me today!"</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+             
+
+        </div>
+    </div>
+
+    <!---------Projects------------> 
     <div id="projects">
         <div class="container">
             <h2 class = "subTitle">My Projects</h2>
@@ -109,11 +140,14 @@
             </div>
         </div>
     </div>
+    <!---------Contact me------------> 
+<footer>
 <div id = "contacts">
     <div class="container">
+        <h2 class="subTitle">Contact Me</h2>
         <div class="rows">
             <div class="contact-left">
-                <h2 class="subTitle">Contact Me</h2>
+               <h3>Contact Me</h3>
                 <p><i class="fa-solid fa-paper-plane"></i>ankitpanda1612@gmail.com</p>
                 <p><i class="fa-solid fa-phone"></i>7077930667</p>
                 <div class="social-icons">
@@ -123,16 +157,43 @@
                     <a href="https://twitter.com/ankit16122002"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
+            <div class="contact-right">
+                <form name = 'submit-to-google-sheet'>
+                    <input type="text" name="Name " placeholder="Your Name" required>
+                    <input type="email" name="Email " placeholder="Your Email" required>
+                    <textarea name="Message" rows = "6" placeholder="Your Message"></textarea>
+                    <button type = "Submit" class = "btn">Submit</button>
+                </form>
+                <span id ="msg"></span>
+            </div>
             
         </div>
     </div>
 </div>
-<footer>
+
     <div class="copyright">
         <p>copyright @ Ankit Panda</p>
     </div>
 </footer>
 
-    <script src = "index.js"></script>   
+    <script src = "index.js"></script> 
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbybyvoDcTFpd55faGi3xjmEHuBUG0X289jkEH2ScZyrmkemVirr2Wm2DWPJqF96O54hTQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent Successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },4000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>  
+   
 </body>
 </html>
