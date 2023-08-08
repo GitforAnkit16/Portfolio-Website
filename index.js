@@ -14,25 +14,27 @@ document.querySelector(".link1").addEventListener("click",function(){
     setTimeout(function(){
         document.querySelector(".skills").classList.remove("invisible");
         i=0;
-    },3000);
+    },8000);
 
-})
+});
 document.querySelector(".link2").addEventListener("click",function(){
     
     if(i==0){
         document.querySelector(".education").classList.add("invisible");
+        document.querySelector(".education").classList.add("visible");
         i++;
     }
     else{
         document.querySelector(".skills").classList.remove("invisible");
         document.querySelector(".experience").classList.remove("invisible");
         document.querySelector(".education").classList.add("invisible");
+        document.querySelector(".education").classList.add("visible");
         i++;
     }
     setTimeout(function(){
         document.querySelector(".education").classList.remove("invisible");
         i=0;
-    },3000);
+    },8000);
 
 })
 document.querySelector(".link3").addEventListener("click",function(){
@@ -50,7 +52,14 @@ document.querySelector(".link3").addEventListener("click",function(){
     setTimeout(function(){
         document.querySelector(".experience").classList.remove("invisible");
         i=0;
-    },3000);
+    },8000);
 
 
 })
+var sidemenu = document.getElementById("sidemenu");
+function openmenu(){
+    sidemenu.style.right = "340px";
+}
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
